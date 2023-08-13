@@ -1,0 +1,194 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #000000;
+}
+.background-img{
+    background-image: url(background-img.jpg);
+    background-size: cover;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    backdrop-filter: 10px;
+
+ 
+}
+
+.typing-container {
+  text-align: center;
+}
+
+.typing-text {
+  border-right: 0.15em solid #041a42;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 11ch;
+  animation: typing 3s steps(11), blink-caret 0.75s step-end infinite;
+  padding-left: 200px;
+  margin-left: 380px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11ch;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #041a42;
+  }
+}
+
+h1 {
+    text-align: center;
+    color: #041a42;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.task-form {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    filter: blur(0px);
+    z-index: -1; /* Place the background behind the form */
+    opacity: var(100%); /* Adjust the opacity for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background:none;
+    color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #252525;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.task {
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgb(163, 161, 161);
+    border-radius: 10px;
+    position: relative;
+    background-color: #dddada;
+    transition: 0.3s;
+    justify-content: center;
+    color: #d4edda;
+}
+
+.task label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-details {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+.task-details span {
+    margin-right: 10px;
+}
+
+.deadline {
+    color: #f39c12;
+}
+
+.priority {
+    color: #e74c3c;
+}
+
+.labels {
+    color: #3498db;
+}
+
+.task button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.task button:hover {
+    background-color: #c0392b;
+}
+
+.task.done {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    border-color: rgb(112, 112, 112)
+}
+.gif-container {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+}
+
+.gif-container:hover img {
+    transform: scale(1.1);
+    filter: grayscale(70%);
+}
